@@ -4,6 +4,3 @@
 [submodule "local_addons/ofxFiducialFinder"]
 	path = local_addons/ofxFiducialFinder
 	url = https://github.com/firmread/ofxFiducialFinder.git
-[submodule "local_addons/--force"]
-	path = local_addons/--force
-	url = https://github.com/firmread/ofxAruco.git
