@@ -94,6 +94,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+<<<<<<< HEAD:42-ArUco/src/ofApp.cpp
     if(key=='t') {
         useVideo = !useVideo;
         if(useVideo){
@@ -106,6 +107,8 @@ void ofApp::keyPressed(int key){
             video = &grabber;
         }
     }
+=======
+>>>>>>> dbb45f4aeb7fc579cabd3fda633c89467a4b81d0:42-ArUco/src/ofApp.cpp
 	if(key=='m') showMarkers = !showMarkers;
 	if(key=='b') showBoard = !showBoard;
 	if(key=='i') showBoardImage = !showBoardImage;
