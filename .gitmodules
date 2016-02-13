@@ -7,6 +7,3 @@
 [submodule "local_addons/--force"]
 	path = local_addons/--force
 	url = https://github.com/firmread/ofxAruco.git
-[submodule "ofxAruco"]
-	path = ofxAruco
-	url = https://github.com/firmread/ofxAruco.git
