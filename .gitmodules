@@ -1,0 +1,6 @@
+[submodule "local_addons/ofxAruco"]
+	path = local_addons/ofxAruco
+	url = https://github.com/arturoc/ofxAruco.git
+[submodule "local_addons/ofxFiducialFinder"]
+	path = local_addons/ofxFiducialFinder
+	url = https://github.com/firmread/ofxFiducialFinder.git

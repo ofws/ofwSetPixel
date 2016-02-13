@@ -47,7 +47,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	#ifdef CAMERA_CONNECTED
-	vidGrabber.grabFrame();
+	vidGrabber.update();
 	bool bNewFrame = vidGrabber.isFrameNew();
 	#else
 	vidPlayer.idleMovie();
@@ -57,9 +57,9 @@ void ofApp::update(){
 	if(bNewFrame) {
 		
 		#ifdef CAMERA_CONNECTED
-		colorImage.setFromPixels(vidGrabber.getPixels(), width, height);
+		colorImage.setFromPixels(vidGrabber.getPixels().getData(), width, height);
 		#else
-		colorImage.setFromPixels(vidPlayer.getPixels(), width, height);
+		colorImage.setFromPixels(vidPlayer.getPixels().getData(), width, height);
 		#endif
 		
 		// convert our camera image to grayscale
@@ -109,7 +109,7 @@ void ofApp::draw(){
 		// ofPoint center = artk.getDetectedMarkerCenter(myIndex);
 		ofSetHexColor(0x0000ff);
 		for(int i=0;i<corners.size();i++) {
-			ofCircle(corners[i].x, corners[i].y, 10);
+			ofDrawCircle(corners[i].x, corners[i].y, 10);
 		}
 	}
 	
@@ -147,7 +147,7 @@ void ofApp::draw(){
 			ofSetColor(255, 255, 0, 50);	
 
 			for(int i=0; i<10; i++) {		
-				ofRect(-25, -25, 50, 50);
+				ofDrawRectangle(-25, -25, 50, 50);
 				ofTranslate(0, 0, i*1);
 			}
 			
@@ -170,34 +170,3 @@ void ofApp::keyPressed(int key){
 	}
 	#endif
 }
-
-//--------------------------------------------------------------
-void ofApp::keyReleased(int key){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::windowResized(int w, int h){
-
-}
-

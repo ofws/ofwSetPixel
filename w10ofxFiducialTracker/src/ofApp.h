@@ -1,9 +1,10 @@
-#ifndef _TEST_APP
-#define _TEST_APP
+#pragma once
 
 #include "ofMain.h"
-#include "ofxCvMain.h"
-#include "ofxFidMain.h"
+//#include "ofxCvMain.h"
+#include "ofxOpenCv.h"
+//#include "ofxFidMain.h"
+#include "ofxFiducialTracker.h"
 
 class ofApp : public ofSimpleApp{
 	
@@ -31,6 +32,3 @@ class ofApp : public ofSimpleApp{
 		
 		
 };
-
-#endif
-	
